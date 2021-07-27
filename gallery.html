@@ -1,0 +1,173 @@
+<!--
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/gallery.css">
+    <title>Image Slider</title>
+</head>
+<body>
+    
+
+    <div class="container">
+        <div class="image">
+            <img src="../web/images/b11r 1.jpg" alt="">
+        </div>
+        <div class="image">
+            <img src="../web/images/b11r bed2.jpg" alt="">
+        </div>
+        <div class="image">
+            <img src="../web/images/b11r beds 1.jpg" alt="">
+        </div>
+        <div class="image">
+            <img src="../web/images/b11r beds.jpg" alt="">
+        </div>
+        <div class="image">
+            <img src="../web/images/b7r bus.jpg" alt="">
+        </div>
+        <div class="image">
+            <img src="../web/images/b7r seats.jpg" alt="">
+        </div>
+        <div class="image">
+            <img src="../web/images/lux2.jpg" alt="">
+        </div>
+        <div class="image">
+            <img src="../web/images/lux 1.jpg" alt="">
+        </div>
+        <div class="image">
+            <img src="../web/images/b9r bus 3.jpg" alt="">
+        </div>
+        <div class="image">
+            <img src="../web/images/b9r bus.jpg" alt="">
+        </div>
+        <div class="image">
+            <img src="../web/images/b9r seats 1.jpg" alt="">
+        </div>
+        <div class="image">
+            <img src="../web/images/b9r seats 2 .jpg" alt="">
+        </div>
+        <h3>We provide the best 3 luxury bus VolVo B11R, B9R, B7R for ur confortable journey</h3>
+        
+
+
+        <div class="button">
+            <a onclick="nextimg(-1)" class="prev">&#10094;</a>
+            <a onclick="nextimg(1)" class="next">&#10095;</a>
+        </div>
+
+        <div class="dots">
+            <span class="dot" onclick="currentSlide(1)"></span>
+            <span class="dot" onclick="currentSlide(2)"></span>
+            <span class="dot" onclick="currentSlide(3)"></span>
+            <span class="dot" onclick="currentSlide(4)"></span>
+            <span class="dot" onclick="currentSlide(5)"></span>
+            <span class="dot" onclick="currentSlide(6)"></span>
+            <span class="dot" onclick="currentSlide(7)"></span>
+            <span class="dot" onclick="currentSlide(8)"></span>
+            <span class="dot" onclick="currentSlide(9)"></span>
+            <span class="dot" onclick="currentSlide(10)"></span>
+            <span class="dot" onclick="currentSlide(11)"></span>
+            <span class="dot" onclick="currentSlide(12)"></span>
+        </div>
+    </div>
+
+    <script>
+
+        var imageno =1;
+        displayimg(imageno);
+
+        function nextimg(n){
+            displayimg(imageno += n)
+        }
+
+        function currentSlide(n){
+            displayimg(imageno = n)
+        }
+
+        function displayimg(n){
+            var i;
+            var image = document.getElementsByClassName("image");
+            var dots = document.getElementsByClassName("dot");
+
+            if(n > image.length){
+                imageno = 1;
+            }
+
+            if(n < 1){
+                imageno = image.length;
+            }
+
+            for(i=0; i < image.length; i++){
+                image[i].style.display = "none";
+            }
+
+            for(i=0; i < dots.length; i++){
+                dots[i].className = dots[i].className.replace(" active", "");
+            }
+
+            image[imageno - 1].style.display ="block";
+            dots[imageno - 1].className += " active";
+
+        }
+
+    </script>
+</body>
+</html>-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="viewpoint" content="width=device-width,initial-scale=1.0">
+    <title>Gallery</title>
+    <link rel="stylesheet" href="css/gallery1.css">
+</head>
+<body>
+    <div class="container">
+        <div class="slider">
+            <div class="slide slide1">
+                <div class="caption">
+                    <h2>Volvo B11R</h2>
+                    <p>
+                        This is Volvo B11R Multi alxe 2x1 AC Sleeper bus.
+                    </p>
+
+                </div>
+            </div>
+            <div class="slide slide2">
+                <div class="caption">
+                    <h2>Volvo B11R</h2>
+                    <p>
+                        The interior of B11R bus 2x1 combination bed.
+                        we will provide blankets and pillow for your confort.
+                    </p>
+
+                </div>
+            </div>
+            <div class="slide slide3">
+                <div class="caption">
+                    <h2>Volvo B9R</h2>
+                    <p>
+                        This is Volvo B9R Multi alxe 2x2 AC Chair Sleeper bus.
+                    </p>
+
+                </div>
+            </div>
+            <div class="slide slide4">
+                <div class="caption">
+                    <h2>Slide4</h2>
+                    <p>
+                        The interior of B9R bus 2x2 combination bed.
+                        we will provide blankets and neck rest pillow for your confort.
+                    </p>
+
+                </div>
+            </div>
+           
+        </div>
+    </div>
+
+    
+</body>
+</html>

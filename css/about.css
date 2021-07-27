@@ -1,0 +1,84 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #ece1e1;
+}
+.about{
+    background: url(../images/about-us.png) no-repeat left;
+    background-size: 55%;
+    background-color: #110f0f;
+    overflow: hidden;
+    padding: 100px 0;
+}
+.inner-section{
+    width: 55%;
+    float: right;
+    background: -webkit-linear-gradient(left, #37c8ec, #e3ff46);
+    padding: 140px;
+    box-shadow: 10px 10px 8px rgba(0,0,0,0.3);
+}
+.inner-section h1{
+    margin-bottom: 30px;
+    font-size: 30px;
+    font-weight: 900;
+}
+.text{
+    font-size: 25px;
+    color: #0c0b0b;
+    line-height: 30px;
+    text-align: justify;
+    margin-bottom: 80px;
+}
+.skills button{
+    font-size: 22px;
+    text-align: center;
+    letter-spacing: 2px;
+    border: none;
+    border-radius: 20px;
+    padding: 8px;
+    width: 200px;
+    background: -webkit-linear-gradient(left, #fd3de4, #a8a4a6);
+   
+    color: rgb(14, 13, 13);
+    cursor: pointer;
+}
+.skills button:hover{
+    transition: 1s;
+    background: -webkit-linear-gradient(left, #2de036, #9646ff);
+    color: #eff7f7;
+}
+@media screen and (max-width:1200px){
+    .inner-section{
+        padding: 80px;
+    }
+}
+@media screen and (max-width:1000px){
+    .about{
+        background-size: 100%;
+        padding: 100px 40px;
+    }
+    .inner-section{
+        width: 100%;
+    }
+}
+
+@media screen and (max-width:600px){
+    .about{
+        padding: 0;
+    }
+    .inner-section{
+        padding: 60px;
+    }
+    .skills button{
+        font-size: 19px;
+        padding: 5px;
+        width: 160px;
+    }
+}
